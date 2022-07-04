@@ -4,7 +4,7 @@ MAINTAINER Overhang.io <contact@overhang.io>
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && \
   apt upgrade -y && \
-  apt install -y wget unzip git openjdk-11-jre openjdk-1-jdk
+  apt install -y wget unzip git openjdk-11-jre openjdk-11-jdk
 
 RUN mkdir /app
 
