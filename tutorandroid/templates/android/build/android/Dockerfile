@@ -4,7 +4,7 @@ MAINTAINER Overhang.io <contact@overhang.io>
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt update && \
   apt upgrade -y && \
-  apt install -y wget unzip git openjdk-8-jre openjdk-8-jdk
+  apt install -y wget unzip git openjdk-11-jre openjdk-1-jdk
 
 RUN mkdir /app
 
@@ -28,7 +28,7 @@ RUN yes | /app/android-sdk/cmdline-tools/bin/sdkmanager --sdk_root=${ANDROID_HOM
 
 # Install android app repo
 ARG ANDROID_APP_REPOSITORY=https://github.com/edx/edx-app-android
-ARG ANDROID_APP_VERSION=release/{{ ANDROID_APP_VERSION }}
+ARG ANDROID_APP_VERSION=master
 RUN git clone $ANDROID_APP_REPOSITORY --branch $ANDROID_APP_VERSION /app/edx-app-android
 WORKDIR /app/edx-app-android
 
