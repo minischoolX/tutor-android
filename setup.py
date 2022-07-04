@@ -27,9 +27,9 @@ ABOUT = load_about()
 setup(
     name="tutor-android",
     version=ABOUT["__version__"],
-    url="https://github.com/overhangio/tutor-android",
+    url="https://github.com/minischoolx/tutor-android",
     project_urls={
-        "Code": "https://github.com/overhangio/tutor-android",
+        "Code": "https://github.com/minischoolx/tutor-android",
         "Issue tracker": "https://github.com/overhangio/tutor-android/issues",
     },
     license="AGPLv3",
